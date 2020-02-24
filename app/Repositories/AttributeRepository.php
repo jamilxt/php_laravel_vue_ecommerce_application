@@ -6,9 +6,9 @@ namespace App\Repositories;
 
 use App\Contracts\AttributeContract;
 use App\Models\Attribute;
-use http\Exception\InvalidArgumentException;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Database\QueryException;
+use InvalidArgumentException;
 
 class AttributeRepository extends BaseRepository implements AttributeContract
 {

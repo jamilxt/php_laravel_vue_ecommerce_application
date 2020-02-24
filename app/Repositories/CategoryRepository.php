@@ -7,10 +7,10 @@ namespace App\Repositories;
 use App\Contracts\CategoryContract;
 use App\Models\Category;
 use App\Traits\UploadAble;
-use http\Exception\InvalidArgumentException;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Database\QueryException;
 use Illuminate\Http\UploadedFile;
+use InvalidArgumentException;
 
 class CategoryRepository extends BaseRepository implements CategoryContract
 {
