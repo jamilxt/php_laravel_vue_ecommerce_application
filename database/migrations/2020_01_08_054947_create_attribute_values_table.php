@@ -19,7 +19,7 @@ class CreateAttributeValuesTable extends Migration
 			$table->foreign('attribute_id')->references('id')->on('attributes')->onDelete('cascade');
 			$table->text('value');
 			// without place parameter, it's causing - 500 Server Error + Numeric value out of range: 1264 in mysql
-			// price needs to be in verchar type maybe... jamilxt
+			// price needs to be in varchar type maybe... jamilxt
 			$table->decimal('price', 4)->nullable();
 			$table->timestamps();
 		});
