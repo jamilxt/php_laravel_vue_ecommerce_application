@@ -23,6 +23,7 @@
 <script src="{{ asset('backend/js/plugins/pace.min.js') }}"></script>
 {{-- to VUE to work--}}
 {{--<script src="{{ asset('js/app.js') }}"></script>--}}
-@stack('scripts') // without this vue js wasn't working properly
+@stack('scripts')
+{{--// ^without this vue js wasn't working properly--}}
 </body>
 </html>

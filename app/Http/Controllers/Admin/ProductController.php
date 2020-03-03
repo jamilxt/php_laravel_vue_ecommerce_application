@@ -7,6 +7,7 @@ use App\Contracts\CategoryContract;
 use App\Contracts\ProductContract;
 use App\Http\Controllers\BaseController;
 use App\Http\Requests\StoreProductFormRequest;
+use App\Models\ProductImage;
 
 class ProductController extends BaseController
 {
