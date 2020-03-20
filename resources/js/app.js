@@ -44,6 +44,7 @@ if (token) {
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
 import VueSwal from 'vue-swal';
+
 Vue.use(VueSwal);
 
 //Vue.component('example-component', require('./components/ExampleComponent.vue').default);
@@ -55,6 +56,7 @@ Vue.use(VueSwal);
  */
 
 Vue.component('attribute-values', require('./components/AttributeValues.vue').default);
+Vue.component('product-attributes', require('./components/ProductAttributes').default);
 
 const app = new Vue({
     el: '#app'
