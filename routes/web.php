@@ -12,5 +12,7 @@
 */
 
 require 'admin.php';
-Auth::routes();
+Auth::routes(); // will enable /login & /register route
 Route::view('/', 'site.pages.homepage');
+
+Route::get('/category/{slug}', 'Site\CategoryController@show')->name('category.show');
