@@ -39,4 +39,6 @@ interface CategoryContract
      * @return mixed
      */
     public function deleteCategory($id);
+
+    public function treeList();
 }
