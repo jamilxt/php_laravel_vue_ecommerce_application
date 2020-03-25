@@ -39,7 +39,7 @@
                                                     <h6 class="title text-truncate">{{ Str::words($item->name,20) }}</h6>
                                                     @foreach($item->attributes as $key  => $value)
                                                         <dl class="dlist-inline small">
-                                                            <dt>{{ ucwords($key) }}: </dt>
+                                                            <dt>{{ ucwords($key) }}:</dt>
                                                             <dd>{{ ucwords($value) }}</dd>
                                                         </dl>
                                                     @endforeach
@@ -51,12 +51,14 @@
                                         </td>
                                         <td>
                                             <div class="price-wrap">
-                                                <var class="price">{{ config('settings.currency_symbol'). $item->price }}</var>
+                                                <var
+                                                    class="price">{{ config('settings.currency_symbol'). $item->price }}</var>
                                                 <small class="text-muted">each</small>
                                             </div>
                                         </td>
                                         <td class="text-right">
-                                            <a href="{{ route('checkout.cart.remove', $item->id) }}" class="btn btn-outline-danger"><i class="fa fa-times"></i> </a>
+                                            <a href="{{ route('checkout.cart.remove', $item->id) }}"
+                                               class="btn btn-outline-danger"><i class="fa fa-times"></i> </a>
                                         </td>
                                     </tr>
                                 @endforeach
@@ -67,10 +69,12 @@
                 </main>
                 <aside class="col-sm-3">
                     <a href="{{ route('checkout.cart.clear') }}" class="btn btn-danger btn-block mb-4">Clear Cart</a>
-                    <p class="alert alert-success">Add USD 5.00 of eligible items to your order to qualify for FREE Shipping. </p>
+                    <p class="alert alert-success">Add USD 5.00 of eligible items to your order to qualify for FREE
+                        Shipping. </p>
                     <dl class="dlist-align h4">
                         <dt>Total:</dt>
-                        <dd class="text-right"><strong>{{ config('settings.currency_symbol') }}{{ \Cart::getSubTotal() }}</strong></dd>
+                        <dd class="text-right">
+                            <strong>{{ config('settings.currency_symbol') }}{{ \Cart::getSubTotal() }}</strong></dd>
                     </dl>
                     <hr>
                     <figure class="itemside mb-3">
@@ -80,13 +84,14 @@
                         </div>
                     </figure>
                     <figure class="itemside mb-3">
-                        <aside class="aside"> <img src="{{ asset('frontend/images/icons/pay-mastercard.png') }}"> </aside>
+                        <aside class="aside"><img src="{{ asset('frontend/images/icons/pay-mastercard.png') }}"></aside>
                         <div class="text-wrap small text-muted">
                             Pay by MasterCard and Save 40%.
                             <br> Lorem ipsum dolor
                         </div>
                     </figure>
-                    <a href="#" class="btn btn-success btn-lg btn-block">Proceed To Checkout</a>
+                    <a href="{{ route('checkout.index') }}" class="btn btn-success btn-lg btn-block">Proceed To
+                        Checkout</a>
                 </aside>
             </div>
         </div>
